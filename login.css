@@ -6,13 +6,24 @@ body {
 #container {
     width: 400px;
     margin: 0 auto;
+    padding-right: 20px;
+    padding-top: 20px;
     display: flex;
-    padding: 20px;
     align-items: center;
     justify-content: center;
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: #b6b5ba;
+}
+
+@media (max-width: 500px) {
+    #container {
+        display: flex;
+        width: 100%;
+        margin: 0;
+        padding-right: 0px;
+        padding-top: 0px;
+    }
 }
 
 form > ul {
@@ -122,12 +133,14 @@ label {
 
 @media (max-width: 800px) {
     .logo {
-        margin-left: 10000px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
 .logo {
-    margin-right: 10px;   
+    margin-right: 10px;
 }
 
 ul {

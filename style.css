@@ -72,10 +72,18 @@ a {
 
 @media (max-width: 800px) {
     .logo {
-        margin-left: 10000px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .post-img {
-        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 0px;
+        padding-top: 0px;
+        width: 100%;
+        margin: 0;
     }
 }
 
@@ -95,8 +103,11 @@ a {
 }
 
 .post-img {
-    width: 400px;
+    width: 100%;
     display: block;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
 }
 
 .post-nav {
