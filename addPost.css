@@ -8,17 +8,18 @@ body {
     margin: 0 auto;
     padding-right: 20px;
     padding-top: 20px;
+    padding-bottom: 20px;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: #b6b5ba;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 450px) {
     .container {
         display: flex;
         padding-right: 0px;
-        padding-top: 0px;
+        padding-top: 20px;
         width: 100%;
         margin: 0;
     }
