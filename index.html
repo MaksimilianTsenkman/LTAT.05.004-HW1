@@ -85,12 +85,10 @@
 
         <script type="module">
             import data from "./some_json.json" assert { type: "json" };
-            console.log(data.posts);
             for (const d of data.posts) {
                 createPost(d);
             }
         </script>
-
 
     </main>
 
