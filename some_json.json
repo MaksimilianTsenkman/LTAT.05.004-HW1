@@ -1,0 +1,64 @@
+{
+  "posts": [
+    {
+      "date": "October 22, 2022",
+      "post_id": 1,
+      "post_image": "https://visittartu.com/sites/default/files/tartu-raekoda-tarmo-haud.jpg",
+      "post_title": "Tartu 2022"
+    },
+    {
+      "date": "November 5, 2022",
+      "post_id": 2,
+      "post_image": "",
+      "post_title": "Beautiful Nature"
+    },
+    {
+      "date": "December 10, 2022",
+      "post_id": 3,
+      "post_image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/b6/0c/6e/tartu-ulikooli.jpg?w=600&h=400&s=1",
+      "post_title": "Old Tartu"
+    },
+    {
+      "date": "January 15, 2023",
+      "post_id": 4,
+      "post_image": "",
+      "post_title": "Breathtaking Tartu"
+    },
+    {
+      "date": "February 20, 2023",
+      "post_id": 5,
+      "post_image": "",
+      "post_title": "Travel Tartu"
+    },
+    {
+      "date": "March 25, 2023",
+      "post_id": 6,
+      "post_image": "https://www.tartuhotell.ee/wp-content/uploads/2020/01/superior1-720x458.jpg",
+      "post_title": "City Life Tartu"
+    },
+    {
+      "date": "April 30, 2023",
+      "post_id": 7,
+      "post_image": "",
+      "post_title": "Adorable Tartu"
+    },
+    {
+      "date": "May 5, 2023",
+      "post_id": 8,
+      "post_image": "https://www.kliinikum.ee/wp-content/uploads/2020/07/kliinikum_ragnar-vutt.jpg",
+      "post_title": "Sports Tartu"
+    },
+    {
+      "date": "June 10, 2023",
+      "post_id": 9,
+      "post_image": "",
+      "post_title": "Foodie Tartu"
+    },
+    {
+      "date": "July 15, 2023",
+      "post_id": 10,
+      "post_image": "",
+      "post_title": "Music Tartu"
+    }
+  ]
+}
