@@ -17,52 +17,125 @@
     </header>
     
     <main>
-        <div class="post">
+        <div class="post" hidden>
             <ul class="post-nav">
                 <a class="post-logo" href="#"><img src="res/images/me.jpg" width="50" height="50" alt="My picture"></a>
                 <p class="date"> October 22, 2022</p>
             </ul>
             <img class="post-img" src="res/images/tartu_2024.jpg" alt="Tartu 2024 sign">
-            <p>Tartu 2022</p>
+            <p class="title"> Tartu 2022 </p>
             <a href="#"><img id="like" src="res/images/like.png" alt="like icon"></a>
         </div>
 
-        <div class="post">
-            <ul class="post-nav">
-                <a class="post-logo" href="#"><img src="res/images/me.jpg" width="50" height="50" alt="My picture"></a>
-                <p class="date"> October 2, 2022</p>
-            </ul>
-            <p>Anyone knows in which room is the lab today?</p>
-            <a href="#"><img id="like" src="res/images/like.png" alt="like icon"></a>
-        </div>
+        <div id="posts-container"></div>
+        <script>
 
-        <div class="post">
-            <ul class="post-nav">
-                <a class="post-logo" href="#"><img src="res/images/me.jpg" width="50" height="50" alt="My picture"></a>
-                <p class="date"> September 28, 2022</p>
-            </ul>
-            <p>What is the deadline for the first homework?</p>
-            <a href="#"><img id="like" src="res/images/like.png" alt="like icon"></a>
-        </div>
+            async function getData() {
+                try {
+                    const response = await fetch('https://api.npoint.io/ac825739cb1f2120f5e7');
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    const textData = await response.text();
+                    const jsonData = JSON.parse(textData);
+                    const dataArray = jsonData.posts;
+                    console.log(dataArray);
+                    return dataArray;
+                } catch (error) {
+                    console.error('Error:', error);
+                    return [];
+                }
+            }
 
-        <div class="post">
-            <ul class="post-nav">
-                <a class="post-logo" href="#"><img src="res/images/me.jpg" width="50" height="50" alt="My picture"></a>
-                <p class="date"> September 21, 2022</p>
-            </ul>
-            <img class="post-img" src="res/images/delta.jpg" alt="delat center">
-            <p>How do I get to delta center?</p>
-            <a href="#"><img id="like" src="res/images/like.png" alt="like icon"></a>
-        </div>
+            function createPost(data) {
+                const postTemplate = document.querySelector(".post").cloneNode(true);
+                postTemplate.removeAttribute("hidden");
+                const postDate = postTemplate.querySelector("p");
+                const postImage = postTemplate.querySelector(".post-img");
+                const postText = postTemplate.querySelector(".title");
 
-        <div class="post">
-            <ul class="post-nav">
-                <a class="post-logo" href="#"><img src="res/images/me.jpg" width="50" height="50" alt="My picture"></a>
-                <p class="date"> September 19, 2022</p>
-            </ul>
-            <p>Where can I find lab material?</p>
-            <a href="#"><img id="like" src="res/images/like.png" alt="like icon"></a>
-        </div>
+                if (data.post_image === "") {
+                    postTemplate.querySelector(".post-img").remove();
+                }
+
+                postText.textContent = data.post_title;
+                postDate.textContent = data.date;
+                postImage.src = data.post_image;
+
+                document.querySelector("#posts-container").appendChild(postTemplate);
+            }
+
+            (async () => {
+                // const dataArray = await getData();
+                const dataArray = [
+                    {
+                        date: 'October 22, 2022',
+                        post_id: 1,
+                        post_image: 'https://visittartu.com/sites/default/files/tartu-raekoda-tarmo-haud.jpg',
+                        post_title: 'Tartu 2022'
+                    },
+                    {
+                        date: 'November 5, 2022',
+                        post_id: 2,
+                        post_image: '',
+                        post_title: 'Beautiful Nature'
+                    },
+                    {
+                        date: 'December 10, 2022',
+                        post_id: 3,
+                        post_image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/b6/0c/6e/tartu-ulikooli.jpg?w=600&h=400&s=1',
+                        post_title: 'Cooking Delights'
+                    },
+                    {
+                        date: 'January 15, 2023',
+                        post_id: 4,
+                        post_image: '',
+                        post_title: 'Breathtaking Sunset'
+                    },
+                    {
+                        date: 'February 20, 2023',
+                        post_id: 5,
+                        post_image: '',
+                        post_title: 'Travel Adventures'
+                    },
+                    {
+                        date: 'March 25, 2023',
+                        post_id: 6,
+                        post_image: 'https://www.tartuhotell.ee/wp-content/uploads/2020/01/superior1-720x458.jpg',
+                        post_title: 'City Life'
+                    },
+                    {
+                        date: 'April 30, 2023',
+                        post_id: 7,
+                        post_image: '',
+                        post_title: 'Adorable Pets'
+                    },
+                    {
+                        date: 'May 5, 2023',
+                        post_id: 8,
+                        post_image: 'https://www.kliinikum.ee/wp-content/uploads/2020/07/kliinikum_ragnar-vutt.jpg',
+                        post_title: 'Sports Enthusiast'
+                    },
+                    {
+                        date: 'June 10, 2023',
+                        post_id: 9,
+                        post_image: '',
+                        post_title: 'Foodie Adventures'
+                    },
+                    {
+                        date: 'July 15, 2023',
+                        post_id: 10,
+                        post_image: '',
+                        post_title: 'Music Vibes'
+                    }
+                ]
+
+                for (const data of dataArray) {
+                    createPost(data);
+                }
+            })();
+
+        </script>
 
     </main>
 
