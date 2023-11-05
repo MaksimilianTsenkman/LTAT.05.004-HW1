@@ -1,0 +1,95 @@
+{
+    "posts": [
+      {
+        "post_id": 1,
+        "date": "October 22, 2022",
+        "author": "John Doe",
+        "profile_picture": "res/images/me.jpg",
+        "post_image": "res/images/tartu_2024.jpg",
+        "post_title": "Tartu 2022",
+        "like_icon": "res/images/like.png"
+      },
+      {
+        "post_id": 2,
+        "date": "November 5, 2022",
+        "author": "Jane Smith",
+        "profile_picture": "res/images/jane.jpg",
+        "post_image": "res/images/nature.jpg",
+        "post_title": "Beautiful Nature",
+        "like_icon": "res/images/like.png"
+      },
+      {
+        "post_id": 3,
+        "date": "December 10, 2022",
+        "author": "Alice Johnson",
+        "profile_picture": "res/images/alice.jpg",
+        "post_image": "res/images/cooking.jpg",
+        "post_title": "Cooking Delights",
+        "like_icon": "res/images/like.png"
+      },
+      {
+        "post_id": 4,
+        "date": "January 15, 2023",
+        "author": "Mark Brown",
+        "profile_picture": "res/images/mark.jpg",
+        "post_image": "res/images/sunset.jpg",
+        "post_title": "Breathtaking Sunset",
+        "like_icon": "res/images/like.png"
+      },
+      {
+        "post_id": 5,
+        "date": "February 20, 2023",
+        "author": "Sophia Davis",
+        "profile_picture": "res/images/sophia.jpg",
+        "post_image": "res/images/travel.jpg",
+        "post_title": "Travel Adventures",
+        "like_icon": "res/images/like.png"
+      },
+      {
+        "post_id": 6,
+        "date": "March 25, 2023",
+        "author": "Michael Wilson",
+        "profile_picture": "res/images/michael.jpg",
+        "post_image": "res/images/city.jpg",
+        "post_title": "City Life",
+        "like_icon": "res/images/like.png"
+      },
+      {
+        "post_id": 7,
+        "date": "April 30, 2023",
+        "author": "Ella Green",
+        "profile_picture": "res/images/ella.jpg",
+        "post_image": "res/images/pets.jpg",
+        "post_title": "Adorable Pets",
+        "like_icon": "res/images/like.png"
+      },
+      {
+        "post_id": 8,
+        "date": "May 5, 2023",
+        "author": "William Clark",
+        "profile_picture": "res/images/william.jpg",
+        "post_image": "res/images/sports.jpg",
+        "post_title": "Sports Enthusiast",
+        "like_icon": "res/images/like.png"
+      },
+      {
+        "post_id": 9,
+        "date": "June 10, 2023",
+        "author": "Olivia White",
+        "profile_picture": "res/images/olivia.jpg",
+        "post_image": "res/images/food.jpg",
+        "post_title": "Foodie Adventures",
+        "like_icon": "res/images/like.png"
+      },
+      {
+        "post_id": 10,
+        "date": "July 15, 2023",
+        "author": "Ethan Johnson",
+        "profile_picture": "res/images/ethan.jpg",
+        "post_image": "res/images/music.jpg",
+        "post_title": "Music Vibes",
+        "like_icon": "res/images/like.png"
+      }
+    ]
+  }
+  
