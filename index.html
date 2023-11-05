@@ -59,7 +59,7 @@
             function createPost(data) {
                 const postTemplate = document.querySelector(".post").cloneNode(true);
                 postTemplate.removeAttribute("hidden");
-                const postDate = postTemplate.querySelector("p");
+                const postDate = postTemplate.querySelector(".date");
                 const postImage = postTemplate.querySelector(".post-img");
                 const postText = postTemplate.querySelector(".title");
 
